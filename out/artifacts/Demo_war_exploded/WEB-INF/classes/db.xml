@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<entity-configuration>
+  <connection-factory name="default">
+    <property name="driverClassName">oracle.jdbc.driver.OracleDriver</property>
+    <property name="url">jdbc:oracle:thin:@192.168.0.40:1521:orcl</property>
+    <property name="username">new_teenagers</property>
+    <property name="password">oracle</property>
+    <property name="initialSize">5</property>
+    <property name="maxActive">120</property>
+    <property name="minIdle">-1</property>
+    <property name="maxIdle">50</property>
+    <property name="maxWait">15000</property>
+    <property name="poolPreparedStatements">true</property>
+    <property name="defaultReadOnly">false</property>
+    <property name="testOnBorrow">false</property>
+    <property name="testOnReturn">false</property>
+    <property name="testWhileIdle">false</property>
+  </connection-factory>
+</entity-configuration>
