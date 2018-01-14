@@ -29,105 +29,46 @@
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="new_teenagers" type="feb32156:DbDataSourceImpl" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="new_teenagers" type="feb32156:DbDataSourceImpl" />
-        <item name="NEW_TEENAGERS: schema" type="ac44c5e0:OracleImplModel$Schema" />
-      </path>
     </expand>
     <select />
   </component>
-  <component name="DockManager">
-    <window id="3">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file leaf-file-name="taskInfoSave.jsp" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/WebContent/topGover/task/taskInfo/taskInfoSave.jsp">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="467">
-                    <caret line="284" column="0" lean-forward="false" selection-start-line="284" selection-start-column="0" selection-end-line="284" selection-end-column="0" />
-                    <folding />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file leaf-file-name="taskInfoVariable.jsp" pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/WebContent/topGover/task/po/taskInfoVariable.jsp">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="201">
-                    <caret line="54" column="27" lean-forward="false" selection-start-line="54" selection-start-column="27" selection-end-line="54" selection-end-column="27" />
-                    <folding />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
-    <window id="5">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file leaf-file-name="taskInfoSelectList.jsp" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/WebContent/topGover/task/taskInfo/taskInfoSelectList.jsp">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="407">
-                    <caret line="154" column="13" lean-forward="true" selection-start-line="154" selection-start-column="13" selection-end-line="154" selection-end-column="13" />
-                    <folding />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
-    <window id="6">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file leaf-file-name="taskInfoTable.tag" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/tags/task/taskInfo/taskInfoTable.tag">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="850">
-                    <caret line="167" column="19" lean-forward="false" selection-start-line="167" selection-start-column="16" selection-end-line="167" selection-end-column="19" />
-                    <folding />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
-    <window id="4">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file leaf-file-name="console_1.sql" pinned="false" current-in-tab="true">
-              <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/0a66dbd0-24ac-4b58-866c-033378c2ea4d/console_1.sql">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="408">
-                    <caret line="48" column="1" lean-forward="true" selection-start-line="48" selection-start-column="1" selection-end-line="48" selection-end-column="1" />
-                    <folding />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="createMulitTaskFrom.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="taskInfoSave.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WebContent/topGover/task/taskInfo/taskInfoSave.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="527">
+              <caret line="298" column="13" lean-forward="false" selection-start-line="298" selection-start-column="13" selection-end-line="298" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mulitTaskInfoList.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/WebContent/topGover/task/taskInfo/mulitTaskInfoList.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="740">
+              <caret line="58" column="0" lean-forward="true" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="createMulitTaskFrom.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WebContent/topGover/task/taskInfo/createMulitTaskFrom.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="509">
-              <caret line="46" column="42" lean-forward="true" selection-start-line="46" selection-start-column="42" selection-end-line="46" selection-end-column="42" />
+            <state relative-caret-position="420">
+              <caret line="93" column="62" lean-forward="false" selection-start-line="93" selection-start-column="42" selection-end-line="93" selection-end-column="62" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="teenagers.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/teenagers.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="91">
+              <caret line="1642" column="11" lean-forward="false" selection-start-line="1642" selection-start-column="2" selection-end-line="1642" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -136,8 +77,8 @@
       <file leaf-file-name="CheckFromInfo.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WebContent/CheckFromInfo.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="176" column="5" lean-forward="true" selection-start-line="176" selection-start-column="5" selection-end-line="176" selection-end-column="47" />
+            <state relative-caret-position="3520">
+              <caret line="176" column="5" lean-forward="false" selection-start-line="176" selection-start-column="5" selection-end-line="176" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -146,8 +87,8 @@
       <file leaf-file-name="createTaskFrom.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WebContent/topGover/task/taskInfo/createTaskFrom.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1122">
-              <caret line="12" column="81" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="12" selection-end-column="81" />
+            <state relative-caret-position="240">
+              <caret line="12" column="81" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="12" selection-end-column="81" />
               <folding />
             </state>
           </provider>
@@ -156,19 +97,9 @@
       <file leaf-file-name="common.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WebContent/js/common.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="196" column="5" lean-forward="true" selection-start-line="196" selection-start-column="5" selection-end-line="196" selection-end-column="5" />
-              <folding>
-                <marker date="1513650356836" expanded="true" signature="10714:10720" ph="&amp;nbsp;" />
-                <marker date="1513650356836" expanded="true" signature="10720:10726" ph="&amp;nbsp;" />
-                <marker date="1513650356836" expanded="true" signature="10726:10732" ph="&amp;nbsp;" />
-                <marker date="1513650356836" expanded="true" signature="10732:10738" ph="&amp;nbsp;" />
-                <marker date="1513650356836" expanded="true" signature="10742:10748" ph="&amp;nbsp;" />
-                <marker date="1513650356836" expanded="true" signature="11085:11091" ph="&amp;nbsp;" />
-                <marker date="1513650356836" expanded="true" signature="13110:13116" ph="&amp;nbsp;" />
-                <marker date="1513650356836" expanded="true" signature="21157:21178" ph="..." />
-                <marker date="1513650356836" expanded="true" signature="21303:21324" ph="..." />
-              </folding>
+            <state relative-caret-position="3920">
+              <caret line="196" column="4" lean-forward="false" selection-start-line="196" selection-start-column="4" selection-end-line="196" selection-end-column="4" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -219,8 +150,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/WebContent/topGover/task/constant/taskInfoSql.jsp" />
-        <option value="$PROJECT_DIR$/src/com/jt/web/task/taskInfoServlet.java" />
         <option value="$PROJECT_DIR$/WebContent/topGover/task/constant/taskObjectInfoSql.jsp" />
         <option value="$PROJECT_DIR$/WebContent/topGover/tags/Utils.jsp" />
         <option value="$PROJECT_DIR$/WebContent/topGover/tags/Utils.tag" />
@@ -268,8 +197,10 @@
         <option value="$PROJECT_DIR$/WebContent/topGover/task/po/taskInfoVariable.jsp" />
         <option value="$PROJECT_DIR$/WebContent/WEB-INF/tags/task/taskInfo/taskInfoTable.tag" />
         <option value="$PROJECT_DIR$/WebContent/topGover/task/taskInfo/taskInfoSelectList.jsp" />
+        <option value="$PROJECT_DIR$/teenagers.sql" />
         <option value="$PROJECT_DIR$/WebContent/topGover/task/taskInfo/createMulitTaskFrom.jsp" />
         <option value="$PROJECT_DIR$/WebContent/topGover/task/taskInfo/taskInfoSave.jsp" />
+        <option value="$PROJECT_DIR$/WebContent/topGover/task/taskInfo/mulitTaskInfoList.jsp" />
       </list>
     </option>
   </component>
@@ -293,10 +224,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1422" />
-    <option name="y" value="-269" />
-    <option name="width" value="1213" />
-    <option name="height" value="550" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1048" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -314,135 +245,51 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="AndroidView" />
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="Demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Demo" type="462c0819:PsiDirectoryNode" />
+              <item name="TEENAJSPDEMO" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TEENAJSPDEMO" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Demo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Demo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Demo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="jt" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Demo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="jt" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Demo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="jt" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Demo" type="462c0819:PsiDirectoryNode" />
+              <item name="TEENAJSPDEMO" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TEENAJSPDEMO" type="462c0819:PsiDirectoryNode" />
               <item name="WebContent" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Demo" type="462c0819:PsiDirectoryNode" />
+              <item name="TEENAJSPDEMO" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TEENAJSPDEMO" type="462c0819:PsiDirectoryNode" />
               <item name="WebContent" type="462c0819:PsiDirectoryNode" />
               <item name="topGover" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Demo" type="462c0819:PsiDirectoryNode" />
-              <item name="WebContent" type="462c0819:PsiDirectoryNode" />
-              <item name="topGover" type="462c0819:PsiDirectoryNode" />
-              <item name="office" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Demo" type="462c0819:PsiDirectoryNode" />
+              <item name="TEENAJSPDEMO" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TEENAJSPDEMO" type="462c0819:PsiDirectoryNode" />
               <item name="WebContent" type="462c0819:PsiDirectoryNode" />
               <item name="topGover" type="462c0819:PsiDirectoryNode" />
               <item name="task" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Demo" type="462c0819:PsiDirectoryNode" />
-              <item name="WebContent" type="462c0819:PsiDirectoryNode" />
-              <item name="topGover" type="462c0819:PsiDirectoryNode" />
-              <item name="task" type="462c0819:PsiDirectoryNode" />
-              <item name="sqlConstant" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Demo" type="462c0819:PsiDirectoryNode" />
+              <item name="TEENAJSPDEMO" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TEENAJSPDEMO" type="462c0819:PsiDirectoryNode" />
               <item name="WebContent" type="462c0819:PsiDirectoryNode" />
               <item name="topGover" type="462c0819:PsiDirectoryNode" />
               <item name="task" type="462c0819:PsiDirectoryNode" />
               <item name="taskInfo" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Demo" type="462c0819:PsiDirectoryNode" />
-              <item name="WebContent" type="462c0819:PsiDirectoryNode" />
-              <item name="topGover" type="462c0819:PsiDirectoryNode" />
-              <item name="task" type="462c0819:PsiDirectoryNode" />
-              <item name="taskObjectInfo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Demo" type="462c0819:PsiDirectoryNode" />
-              <item name="WebContent" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Demo" type="462c0819:PsiDirectoryNode" />
-              <item name="WebContent" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="tags" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Demo" type="462c0819:PsiDirectoryNode" />
-              <item name="WebContent" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="tags" type="462c0819:PsiDirectoryNode" />
-              <item name="task" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Demo" type="462c0819:PsiDirectoryNode" />
-              <item name="WebContent" type="462c0819:PsiDirectoryNode" />
-              <item name="ztree" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="database.main" />
-    <property name="last_opened_file_path" value="D:/Program Files/google_checks.xml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -453,19 +300,19 @@
     <property name="DataGrid.QuickDoc.View" value="regular" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\jt-project\trunk\Documents\重构\demo\demo\Demo\WebContent\WEB-INF\tags" />
-      <recent name="E:\jt-project\trunk\Documents\重构\demo\demo\Demo\WebContent\topGover\office" />
-      <recent name="E:\jt-project\trunk\Documents\重构\demo\demo\Demo\WebContent\css" />
-      <recent name="E:\jt-project\trunk\Documents\重构\demo\demo\Demo\WebContent\js\ztree" />
-      <recent name="E:\jt-project\trunk\Documents\重构\demo\demo\Demo\WebContent" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\jt-project\trunk\Documents\重构\demo\demo\Demo\WebContent\topGover\task\taskInfo" />
       <recent name="E:\jt-project\trunk\Documents\重构\demo\demo\Demo\WebContent" />
       <recent name="E:\jt-project\trunk\Documents\重构\demo\demo\Demo\WebContent\ztree" />
       <recent name="E:\jt-project\trunk\Documents\重构\demo\demo\Demo\WebContent\topGover" />
       <recent name="E:\jt-project\trunk\Documents\重构\demo\demo\Demo\WebContent\topGover\task\taskObjectInfo\details" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\黄富勇\Documents\GitHub\TEENAJSPDEMO\WebContent\topGover\task\taskInfo" />
+      <recent name="E:\jt-project\trunk\Documents\重构\demo\demo\Demo\WebContent\WEB-INF\tags" />
+      <recent name="E:\jt-project\trunk\Documents\重构\demo\demo\Demo\WebContent\topGover\office" />
+      <recent name="E:\jt-project\trunk\Documents\重构\demo\demo\Demo\WebContent\css" />
+      <recent name="E:\jt-project\trunk\Documents\重构\demo\demo\Demo\WebContent\js\ztree" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -686,7 +533,7 @@
     <option name="remove_strategy" value="false" />
   </component>
   <component name="SvnConfiguration" cleanupOnStartRun="true">
-    <configuration>C:\Users\私人\AppData\Roaming\Subversion</configuration>
+    <configuration>C:\Users\黄富勇\AppData\Roaming\Subversion</configuration>
     <supportedVersion>125</supportedVersion>
   </component>
   <component name="TaskManager">
@@ -709,11 +556,12 @@
       <workItem from="1515546417298" duration="27872000" />
       <workItem from="1515632685061" duration="20370000" />
       <workItem from="1515719697026" duration="20216000" />
+      <workItem from="1515902599061" duration="5920000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="180596000" />
+    <option name="totallyTimeSpent" value="186516000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -725,36 +573,32 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1288" y="-269" width="1296" height="1000" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.59375" sideWeight="0.5030257" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="SQL Generator" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3298611" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23148148" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23462783" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24919094" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5197368" sideWeight="0.4969743" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="ReactNative" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.59375" sideWeight="0.5030257" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.8799342" sideWeight="0.4969743" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.49092284" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3576052" sideWeight="0.74040633" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4548872" sideWeight="0.74040633" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32829046" sideWeight="0.25959367" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="BPMNPalette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29484424" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24919094" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.51881415" sideWeight="0.4969743" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27231467" sideWeight="0.24634147" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -763,60 +607,65 @@
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="SQL Generator" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3298611" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23148148" sideWeight="0.5" order="17" side_tool="false" content_ui="tabs" />
       <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="ReactNative" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" x="0" y="0" width="548" height="800" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="15" side_tool="true" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46710527" sideWeight="0.49514562" order="17" side_tool="false" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21875" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="BPMNPalette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.59375" sideWeight="0.5030257" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.59375" sideWeight="0.5030257" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="SQL Generator" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298611" sideWeight="0.5" order="17" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298611" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23462783" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="SQL Generator" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3298611" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23148148" sideWeight="0.5" order="17" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29484424" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24919094" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5197368" sideWeight="0.4969743" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.51881415" sideWeight="0.4969743" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="ReactNative" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="ReactNative" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" x="0" y="0" width="548" height="800" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.8799342" sideWeight="0.4969743" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.8799342" sideWeight="0.4969743" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="15" side_tool="true" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.49092284" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.49092284" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46710527" sideWeight="0.49514562" order="18" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3343419" sideWeight="0.74040633" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4548872" sideWeight="0.74040633" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32829046" sideWeight="0.25959367" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21875" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="BPMNPalette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21875" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27231467" sideWeight="0.24634147" order="8" side_tool="true" content_ui="tabs" />
     </layout-to-restore>
@@ -879,21 +728,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/WebContent/WEB-INF/lib/rad.jar!/com/rad/db/Record.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="107" column="18" lean-forward="false" selection-start-line="107" selection-start-column="11" selection-end-line="107" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/page.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="54" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/tags/task/formInfo/formInfo.tag">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-153">
@@ -902,13 +736,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://table:/24a8297d/0a66dbd0-24ac-4b58-866c-033378c2ea4d/NEW_TEENAGERS.S_CHECK_CONTENT">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://table:/24a8297d/0a66dbd0-24ac-4b58-866c-033378c2ea4d/NEW_TEENAGERS.S_CHECK_CONTENT" />
     <entry file="file://$PROJECT_DIR$/WebContent/formInfoSave.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -928,7 +756,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" column="23" lean-forward="false" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -936,7 +763,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -944,7 +770,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
           <caret line="383" column="4" lean-forward="false" selection-start-line="383" selection-start-column="4" selection-end-line="383" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -971,14 +796,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/0a66dbd0-24ac-4b58-866c-033378c2ea4d/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="62" lean-forward="false" selection-start-line="0" selection-start-column="62" selection-end-line="0" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/0a66dbd0-24ac-4b58-866c-033378c2ea4d/console.sql" />
     <entry file="file://$PROJECT_DIR$/WebContent/topGover/task/taskObjectInfo/details/claimTheTaskDetail.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="155">
@@ -1023,7 +841,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="34" lean-forward="false" selection-start-line="1" selection-start-column="34" selection-end-line="1" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1031,7 +848,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1083,19 +899,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://src:table:/24a8297d/0a66dbd0-24ac-4b58-866c-033378c2ea4d/NEW_TEENAGERS.T_CHECK_RESULT">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2037">
-          <caret line="159" column="51" lean-forward="true" selection-start-line="159" selection-start-column="51" selection-end-line="159" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://src:table:/24a8297d/0a66dbd0-24ac-4b58-866c-033378c2ea4d/NEW_TEENAGERS.T_CHECK_RESULT" />
     <entry file="file://$PROJECT_DIR$/WebContent/topGover/task/taskObjectInfo/taskObjectInfoSave.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="126" column="40" lean-forward="false" selection-start-line="126" selection-start-column="40" selection-end-line="126" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1107,99 +915,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://table:/24a8297d/0a66dbd0-24ac-4b58-866c-033378c2ea4d/NEW_TEENAGERS.T_TASK_INFO">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/24a8297d/0a66dbd0-24ac-4b58-866c-033378c2ea4d/NEW_TEENAGERS.T_CHECK_RESULT">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-          <column-attributes>
-            <column name="ROWID" enabled="false" />
-          </column-attributes>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://src:table:/24a8297d/0a66dbd0-24ac-4b58-866c-033378c2ea4d/NEW_TEENAGERS.T_TASK_INFO">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="73" column="0" lean-forward="false" selection-start-line="73" selection-start-column="0" selection-end-line="82" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/24a8297d/0a66dbd0-24ac-4b58-866c-033378c2ea4d/NEW_TEENAGERS.T_TASK_OBJECT_INFO">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://src:table:/24a8297d/0a66dbd0-24ac-4b58-866c-033378c2ea4d/NEW_TEENAGERS.T_TASK_OBJECT_INFO">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="93" column="1" lean-forward="true" selection-start-line="93" selection-start-column="1" selection-end-line="93" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/24a8297d/0a66dbd0-24ac-4b58-866c-033378c2ea4d/NEW_TEENAGERS.T_CHECK_INFO">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/24a8297d/0a66dbd0-24ac-4b58-866c-033378c2ea4d/NEW_TEENAGERS.T_TASK_FORM">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://src:table:/24a8297d/0a66dbd0-24ac-4b58-866c-033378c2ea4d/NEW_TEENAGERS.T_TASK_FORM">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://src:table:/24a8297d/0a66dbd0-24ac-4b58-866c-033378c2ea4d/NEW_TEENAGERS.T_CHECK_INFO">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="90" column="62" lean-forward="true" selection-start-line="90" selection-start-column="62" selection-end-line="90" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/0a66dbd0-24ac-4b58-866c-033378c2ea4d/console_1.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="48" column="1" lean-forward="true" selection-start-line="48" selection-start-column="1" selection-end-line="48" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://table:/24a8297d/0a66dbd0-24ac-4b58-866c-033378c2ea4d/NEW_TEENAGERS.T_TASK_INFO" />
+    <entry file="das://table:/24a8297d/0a66dbd0-24ac-4b58-866c-033378c2ea4d/NEW_TEENAGERS.T_CHECK_RESULT" />
+    <entry file="das://src:table:/24a8297d/0a66dbd0-24ac-4b58-866c-033378c2ea4d/NEW_TEENAGERS.T_TASK_INFO" />
+    <entry file="das://table:/24a8297d/0a66dbd0-24ac-4b58-866c-033378c2ea4d/NEW_TEENAGERS.T_TASK_OBJECT_INFO" />
+    <entry file="das://src:table:/24a8297d/0a66dbd0-24ac-4b58-866c-033378c2ea4d/NEW_TEENAGERS.T_TASK_OBJECT_INFO" />
+    <entry file="das://table:/24a8297d/0a66dbd0-24ac-4b58-866c-033378c2ea4d/NEW_TEENAGERS.T_CHECK_INFO" />
+    <entry file="das://table:/24a8297d/0a66dbd0-24ac-4b58-866c-033378c2ea4d/NEW_TEENAGERS.T_TASK_FORM" />
+    <entry file="das://src:table:/24a8297d/0a66dbd0-24ac-4b58-866c-033378c2ea4d/NEW_TEENAGERS.T_TASK_FORM" />
+    <entry file="das://src:table:/24a8297d/0a66dbd0-24ac-4b58-866c-033378c2ea4d/NEW_TEENAGERS.T_CHECK_INFO" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/0a66dbd0-24ac-4b58-866c-033378c2ea4d/console_1.sql" />
     <entry file="file://$PROJECT_DIR$/WebContent/js/common.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="196" column="5" lean-forward="true" selection-start-line="196" selection-start-column="5" selection-end-line="196" selection-end-column="5" />
-          <folding>
-            <marker date="1513650356836" expanded="true" signature="10714:10720" ph="&amp;nbsp;" />
-            <marker date="1513650356836" expanded="true" signature="10720:10726" ph="&amp;nbsp;" />
-            <marker date="1513650356836" expanded="true" signature="10726:10732" ph="&amp;nbsp;" />
-            <marker date="1513650356836" expanded="true" signature="10732:10738" ph="&amp;nbsp;" />
-            <marker date="1513650356836" expanded="true" signature="10742:10748" ph="&amp;nbsp;" />
-            <marker date="1513650356836" expanded="true" signature="11085:11091" ph="&amp;nbsp;" />
-            <marker date="1513650356836" expanded="true" signature="13110:13116" ph="&amp;nbsp;" />
-            <marker date="1513650356836" expanded="true" signature="21157:21178" ph="..." />
-            <marker date="1513650356836" expanded="true" signature="21303:21324" ph="..." />
-          </folding>
+        <state relative-caret-position="3920">
+          <caret line="196" column="4" lean-forward="false" selection-start-line="196" selection-start-column="4" selection-end-line="196" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1211,14 +941,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/topGover/ztreeSelect.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="32" column="19" lean-forward="true" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/topGover/ztreeSelect.jsp" />
     <entry file="file://$PROJECT_DIR$/WebContent/tagTreeselect.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="886">
@@ -1229,7 +952,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/topGover/task/po/taskInfoVariable.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
+        <state relative-caret-position="1080">
           <caret line="54" column="27" lean-forward="false" selection-start-line="54" selection-start-column="27" selection-end-line="54" selection-end-column="27" />
           <folding />
         </state>
@@ -1237,16 +960,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/CheckFromInfo.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="176" column="5" lean-forward="true" selection-start-line="176" selection-start-column="5" selection-end-line="176" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/topGover/task/taskInfo/taskInfoSelectList.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="154" column="13" lean-forward="true" selection-start-line="154" selection-start-column="13" selection-end-line="154" selection-end-column="13" />
+        <state relative-caret-position="3520">
+          <caret line="176" column="5" lean-forward="false" selection-start-line="176" selection-start-column="5" selection-end-line="176" selection-end-column="47" />
           <folding />
         </state>
       </provider>
@@ -1261,32 +976,56 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/topGover/task/taskInfo/createTaskFrom.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1122">
-          <caret line="12" column="81" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="12" selection-end-column="81" />
+        <state relative-caret-position="240">
+          <caret line="12" column="81" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="12" selection-end-column="81" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/topGover/task/taskInfo/taskInfoSelectList.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="154" column="13" lean-forward="false" selection-start-line="154" selection-start-column="13" selection-end-line="154" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/tags/task/taskInfo/taskInfoTable.tag">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
+        <state relative-caret-position="677">
           <caret line="167" column="19" lean-forward="false" selection-start-line="167" selection-start-column="16" selection-end-line="167" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/topGover/task/taskInfo/createMulitTaskFrom.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="509">
-          <caret line="46" column="42" lean-forward="true" selection-start-line="46" selection-start-column="42" selection-end-line="46" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/topGover/task/taskInfo/taskInfoSave.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="284" column="0" lean-forward="false" selection-start-line="284" selection-start-column="0" selection-end-line="284" selection-end-column="0" />
+        <state relative-caret-position="527">
+          <caret line="298" column="13" lean-forward="false" selection-start-line="298" selection-start-column="13" selection-end-line="298" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/teenagers.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="91">
+          <caret line="1642" column="11" lean-forward="false" selection-start-line="1642" selection-start-column="2" selection-end-line="1642" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/topGover/task/taskInfo/createMulitTaskFrom.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="93" column="62" lean-forward="false" selection-start-line="93" selection-start-column="42" selection-end-line="93" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/topGover/task/taskInfo/mulitTaskInfoList.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="740">
+          <caret line="58" column="0" lean-forward="true" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
           <folding />
         </state>
       </provider>

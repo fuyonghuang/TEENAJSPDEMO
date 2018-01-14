@@ -36,7 +36,7 @@
         <option value="4">每年</option>
     </select>
     <h3>选择子任务</h3>
-    <button type="button" onclick="alertTaskTable()">选择子任务</button>
+    <button type="button" onclick="subTaskTableSelect()">选择子任务</button>
     <div>
         <table>
 
@@ -64,14 +64,15 @@
 
         </table>
     </div>
-
+    <button type="submit">提交</button>
+    <button type="button">取消</button>
 </form>
 </body>
 <script>
 
   var subTaskList = new Array();
 
-  function alertTaskTable() {
+  function subTaskTableSelect() {
 
     top.dialog({
       id: "treeSelect",
@@ -105,6 +106,7 @@
 
   }
 
+  //生成子任务列表
   function createSubTaskList() {
     $("#subTaskList").append("");
     var html = ""

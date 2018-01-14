@@ -272,6 +272,7 @@
             return;
         }
     } else if ("saveTask".equals(action)) {
+        String subTaskListStr = request.getParameter( "subTaskListStr" )==null?"":request.getParameter( "subTaskListStr" );
         taskId = CommonUtil.getUUid();
         HashMap<String, String> map = warpTaskInfoMap(taskId, taskName, taskType, startDate,
                 "", endDate, startTime,
@@ -281,6 +282,22 @@
                 objectCompany,
                 objectUser, totalObjectNum, applyPerson, checkPerson, checkDesc, checkTime,
                 createTime, isApply);
+
+        String[] subTasks = subTaskListStr.split( "," );
+        for(String subTaskid:subTasks){
+            HashMap<String, String> hKeyValue = new HashMap<String, String>();
+
+            hKeyValue.put("parent_id", taskId);
+            try {
+                CommonDaoAction.updateInfoByKeyValue("t_task_info", "task_id", subTaskid, hKeyValue);
+                //增加日志，注释，没表
+                response.sendRedirect("taskInfoList.jsp?txtAction=query");
+            } catch (Exception e) {
+                out.println("<script>alert(\"保存出错,错误代码:" + e.getMessage()
+                        + "\");window.history.back(); </script>");
+                return;
+            }
+        };
 
         try {
             CommonDaoAction.insertInfo("t_task_info", map);

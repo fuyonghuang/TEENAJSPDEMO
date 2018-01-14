@@ -20,6 +20,7 @@
 <body>
 
 <form action="">
+    <input type="hidden" name="subTaskListStr">
     任务名称: <input type="text" name="taskName"><br>
     开始时间: <input type="date" name="startDate">
     <input type="time" name="startTime"> ~ 截至时间: <input type="date" name="endDate">
@@ -171,6 +172,9 @@
     }
 
     $("#subTaskList").append(html);
+
+    document.getElementsByName("subTaskListStr").value= JSON.stringify(subTaskList);
+
   }
 
 </script>

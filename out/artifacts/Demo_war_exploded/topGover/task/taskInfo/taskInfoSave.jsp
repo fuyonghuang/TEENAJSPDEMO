@@ -35,7 +35,7 @@
 
         taskId = CommonUtil.getUUid();
         HashMap<String, String> map = warpTaskInfoMap(taskId, taskName, taskType, startDate,
-                formArry, endDate, startTime,
+                formArry.length > 1 ? "1" : "0", endDate, startTime,
                 endTime,
                 notHandleDay, onlyWorkDay, infoHandleType, releasePersion, releaseTime, checkType,
                 checkCompanyCode, checkCompanyName, objectCompanyType, objectCompanyParentCode,
@@ -271,6 +271,24 @@
                     + "\");window.history.back(); </script>");
             return;
         }
+    } else if ("saveTask".equals(action)) {
+        taskId = CommonUtil.getUUid();
+        HashMap<String, String> map = warpTaskInfoMap(taskId, taskName, taskType, startDate,
+                "", endDate, startTime,
+                endTime,
+                notHandleDay, onlyWorkDay, infoHandleType, releasePersion, releaseTime, checkType,
+                checkCompanyCode, checkCompanyName, objectCompanyType, objectCompanyParentCode,
+                objectCompany,
+                objectUser, totalObjectNum, applyPerson, checkPerson, checkDesc, checkTime,
+                createTime, isApply);
+
+        try {
+            CommonDaoAction.insertInfo("t_task_info", map);
+        } catch (Exception e) {
+            out.println("<script>alert(\"保存出错,错误代码:" + e.getMessage()
+                    + "\");window.history.back(); </script>");
+            return;
+        }
     }
 
 %>
@@ -418,7 +436,7 @@
      */
     private HashMap<String, String> warpTaskInfoMap(String taskId, String taskName, String taskType,
             String startDate,
-            String[] formArry, String endDate, String startTime,
+            String formType, String endDate, String startTime,
             String endTime, String notHandleDay, String onlyWorkDay, String infoHandleType,
             String releasePersion, String releaseTime, String checkType, String checkCompanyCode,
             String checkCompanyName, String objectCompanyType, String objectCompanyParentCode,
@@ -447,7 +465,7 @@
         map.put("check_compan_code", checkCompanyCode);
         map.put("check_company_name", checkCompanyName);
         //如果表单数大于一则为多表单，否则为单表单
-        map.put("form_type", formArry.length > 1 ? "1" : "0");
+        map.put("form_type", formType);
         map.put("info_status", isApply);
         map.put("object_company_type", objectCompanyType);
         map.put("object_company_parent_code", objectCompanyParentCode);
