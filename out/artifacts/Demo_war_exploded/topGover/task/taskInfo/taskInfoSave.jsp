@@ -34,6 +34,7 @@
         //插入task_info
 
         taskId = CommonUtil.getUUid();
+        taskCategory = "0";
         HashMap<String, String> map = warpTaskInfoMap(taskId, taskName, taskType, startDate,
                 formArry.length > 1 ? "1" : "0", endDate, startTime,
                 endTime,
@@ -41,7 +42,7 @@
                 checkCompanyCode, checkCompanyName, objectCompanyType, objectCompanyParentCode,
                 objectCompany,
                 objectUser, totalObjectNum, applyPerson, checkPerson, checkDesc, checkTime,
-                createTime, isApply);
+                createTime, isApply, taskCategory);
         try {
             CommonDaoAction.insertInfo("t_task_info", map);
         } catch (Exception e) {
@@ -271,8 +272,12 @@
                     + "\");window.history.back(); </script>");
             return;
         }
-    } else if ("saveTask".equals(action)) {
+    } else if ("saveMulitTask".equals(action)) {
+        String subTaskListStr = request.getParameter("subTaskListStr") == null ? ""
+                : request.getParameter("subTaskListStr");
         taskId = CommonUtil.getUUid();
+
+        taskCategory = "1";
         HashMap<String, String> map = warpTaskInfoMap(taskId, taskName, taskType, startDate,
                 "", endDate, startTime,
                 endTime,
@@ -280,15 +285,32 @@
                 checkCompanyCode, checkCompanyName, objectCompanyType, objectCompanyParentCode,
                 objectCompany,
                 objectUser, totalObjectNum, applyPerson, checkPerson, checkDesc, checkTime,
-                createTime, isApply);
-
+                createTime, isApply, taskCategory);
         try {
             CommonDaoAction.insertInfo("t_task_info", map);
+
+            String[] subTasks = subTaskListStr.split(",");
+            for (String subTaskid : subTasks) {
+                HashMap<String, String> hKeyValue = new HashMap<String, String>();
+
+                hKeyValue.put("parent_id", taskId);
+                try {
+                    CommonDaoAction
+                            .updateInfoByKeyValue("t_task_info", "task_id", subTaskid, hKeyValue);
+                    //增加日志，注释，没表
+                    response.sendRedirect("mulitTaskInfoList.jsp?txtAction=query");
+                } catch (Exception e) {
+                    out.println("<script>alert(\"保存出错,错误代码:" + e.getMessage()
+                            + "\");window.history.back(); </script>");
+                    return;
+                }
+            }
         } catch (Exception e) {
             out.println("<script>alert(\"保存出错,错误代码:" + e.getMessage()
                     + "\");window.history.back(); </script>");
             return;
         }
+        ;
     }
 
 %>
@@ -442,11 +464,11 @@
             String checkCompanyName, String objectCompanyType, String objectCompanyParentCode,
             String objectCompany, String objectUser, String totalObjectNum, String applyPerson,
             String checkPerson, String checkDesc, String checkTime, String createTime,
-            String isApply) {
+            String isApply, String taskCategory) {
         HashMap<String, String> map = new HashMap();
         map.put("task_id", taskId);
         map.put("task_name", taskName);
-        map.put("task_category", "0");
+        map.put("task_category", taskCategory);
         map.put("task_type", taskType);
         map.put("task_from", "TASK");
         map.put("start_date", startDate);

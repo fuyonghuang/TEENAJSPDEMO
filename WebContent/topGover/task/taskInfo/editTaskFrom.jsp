@@ -1,9 +1,33 @@
 <%@ page language="java" pageEncoding="UTF-8" %>
 <%@ include file="/import.jsp" %>
+<%@ include file="/topGover/task/po/taskInfoVariable.jsp" %>
+<%@ include file="/topGover/task/sqlConstant/taskInfoSql.jsp" %>
 <%@ taglib prefix="zt" tagdir="/WEB-INF/tags" %>
+
+<%
+    Record record = new Record();
+    Record taskFormRecord = new Record();
+    SqlManager sqlManager = new SqlManager();
+    Vector vPara = new Vector();
+    String querySqlStr = "";
+
+    if (!action.equals("insert")) {
+        //获取task_info详情
+        record = CommonDaoAction.getInfoByKeyValue("t_task_info", "task_id", taskId);
+        record.next();
+        vPara = new Vector();
+        //获取（检查单位）task_object_info列表。
+        taskFormRecord = CommonDaoAction.getInfoByKeyValue("t_task_form", "task_id", taskId);
+        vPara.add(taskId);
+        request.getSession().setAttribute("expExcel_sql", querySqlStr);
+        request.getSession().setAttribute("expExcel_para", vPara);
+    }
+%>
+
+
 <html>
 <head>
-    <title>Title</title>
+    <title>任务编辑</title>
     <script src="/js/jquery-2.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/artDialog/7.0.0/dialog-plus.js"></script>
     <%--    <script src="https://cdnjs.cloudflare.com/ajax/libs/artDialog/7.0.0/dialog.js"></script>--%>
@@ -16,20 +40,51 @@
 
 <form action="/topGover/task/taskInfo/taskInfoSave.jsp?txtAction=update" method="post">
 
-    任务名称: <input type="text" name="taskName"><br>
-    开始时间: <input type="date" name="startDate">
-    <input type="time" name="startTime"> ~ 截至时间: <input type="date" name="endDate">
-    <input type="time" name="endTime"><br>
-    <input type="text" name="taskCategory">
+    任务名称: <input type="text" name="taskName" value="<%=record.getString("task_name")%>"><br>
+    开始时间:
+    <input type="date" name="startDate" value="<%=record.getString("start_date")%>">
+    <input type="time" name="startTime" value="<%=record.getString("start_time")%>"> ~
+    截至时间: <input type="date" name="endDate" value="<%=record.getString("end_date")%>">
+    <input type="time" name="endTime" value="<%=record.getString("end_time")%>"><br>
+    任务类型：
+    <select name="taskType " id="taskType">
+        <option value="日常安检">日常安检</option>
+        <option value="每日安检">每日安检</option>
+    </select>
     <br/>
 
     处理方式：
     <select name="infoHandleType">
-        <option value="0">单次</option>
-        <option value="1">每日</option>
-        <option value="2">每周</option>
-        <option value="3">每月</option>
-        <option value="4">每年</option>
+        <option value="0"
+                <%if(record.getString("info_handle_type").equals("0")){%>selected="selected"<%
+            }
+
+        %>>单次
+        </option>
+        <option value="1"
+                <%if(record.getString("info_handle_type").equals("1")){%>selected="selected"<%
+            }
+
+        %>>每日
+        </option>
+        <option value="2"
+                <%if(record.getString("info_handle_type").equals("2")){%>selected="selected"<%
+            }
+
+        %>>每周
+        </option>
+        <option value="3"
+                <%if(record.getString("info_handle_type").equals("3")){%>selected="selected"<%
+            }
+
+        %>>每月
+        </option>
+        <option value="4"
+                <%if(record.getString("info_handle_type").equals("4")){%>selected="selected"<%
+            }
+
+        %>>每年
+        </option>
     </select>
     <br>
     是否审核：
@@ -50,7 +105,7 @@
     <input type="radio" name="onlyWorkDay" value="0"> 否
     <input type="radio" name="onlyWorkDay" value="1"> 是
     <br>
-    工作日历：<input type="date" name="notHandleDay">
+    工作日历：<input type="date" name="notHandleDay" value="<%=record.getString("not_handle_day")%>">
     <br/>
     表单选择：
     <button type="button" onclick="alertFromPage()" name="selectFrom">选择表单</button>
@@ -68,7 +123,8 @@
         <option value="2">以上两者</option>
     </select><br/>
     <div style="display: none" id="execCompanyDiv">
-        执行单位：<zt:mytreeselect id="checkCompanCode" name="checkCompanCode" value=""
+        执行单位：<zt:mytreeselect id="checkCompanCode" name="checkCompanCode"
+                              value=""
                               labelName="checkCompanyName"
                               labelValue=""
                               title="区县选择" checked="true"
@@ -88,7 +144,8 @@
     </select>
 
     <br/>
-    区县：<zt:mytreeselect id="objectCompanyParentCode" name="objectCompanyParentCode" value=""
+    区县：<zt:mytreeselect id="objectCompanyParentCode" name="objectCompanyParentCode"
+                        value=""
                         labelName="objectCompanyParentCode"
                         labelValue=""
                         title="区县选择" checked="true"
@@ -103,14 +160,17 @@
     </select>
     <br/>
 
-    指定单位： <zt:mytreeselect id="companyCode" name="companyCode" value="" labelName="companyName"
+    指定单位： <zt:mytreeselect id="companyCode" name="companyCode"
+                           value="" labelName="companyName"
                            labelValue=""
                            title="学校选择" checked="true"
                            url="/topGover/office/office.json"></zt:mytreeselect><br/>
 
 
-    指定人： <zt:mytreeselect id="apportionUserId" name="apportionUserId" value=""
-                          labelName="apportionUserName" labelValue=""
+    指定人： <zt:mytreeselect id="apportionUserId" name="apportionUserId"
+                          value=""
+                          labelName="apportionUserName"
+                          labelValue=""
                           title="指定人选择" checked="true"
                           url="/topGover/user/userInfo.json"></zt:mytreeselect><br/>
 
@@ -119,9 +179,13 @@
 </form>
 
 <script>
+
+  $(function () {
+
+  })
+
   //检查任务类型，绝对是否要显示任务执行单位选择。
   function checkTaskCategory(v) {
-    debugger
     if (v !== "0") {
       document.getElementById("execCompanyDiv").style.display = "block";
     }

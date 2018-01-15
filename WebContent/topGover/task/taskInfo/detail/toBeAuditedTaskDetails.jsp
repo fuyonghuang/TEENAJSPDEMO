@@ -3,6 +3,7 @@
 <%@ include file="/topGover/task/po/taskInfoVariable.jsp" %>
 <%@ include file="/configQueryPage.jsp" %>
 <%@ taglib prefix="mxt" tagdir="/WEB-INF/tags/task/taskObjectInfo" %>
+<%@ include file="/topGover/task/sqlConstant/taskObjectInfoSql.jsp" %>
 <%
     if ("".equals(taskId)) {
         out.println(
@@ -26,7 +27,7 @@
         infoStatus = record.getString("info_status");
         vPara = new Vector();
         //获取（检查单位）task_object_info列表。
-        querySqlStr = "SELECT t.* FROM T_TASK_OBJECT_INFO t where  t.task_id = ? ";
+        querySqlStr = QUERY_TASKOBJECTINFO + "and t.task_id = ? ";
         vPara.add(taskId);
         taskObjectInfoRecord = sqlManager.getRecords(querySqlStr, vPara, pageQuery);
         request.getSession().setAttribute("expExcel_sql", querySqlStr);
@@ -36,12 +37,9 @@
 %>
 <html>
 <head>
-    <title>待审核</title>
-    <%-- <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>--%>
-    <script src="https://unpkg.com/sweetalert2@7.3.2/dist/sweetalert2.all.js"></script>
-
-    <!-- Include a polyfill for ES6 Promises (optional) for IE11, UC Browser and Android browser support -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+    <title>待审核详情</title>
+    <link rel="stylesheet" type="text/css" href="/css/page.css">
+    <script src="/js/common.js"></script>
 </head>
 <body>
 
@@ -62,8 +60,34 @@
             <td>下发人：</td>
             <td><span><%= record.getString("danger_num")%></span></td>
             <td>处理方式：</td>
-            <td><span><%= record.getString("finished_num")%>/<%=record
-                    .getString("total_object_num")%></span></td>
+            <td><span> <%
+                    switch (record.getString("info_handle_type")) {
+                        case "0": %>
+            <td>单次&nbsp;</td>
+            <%
+                    break;
+                case "1": %>
+            <td>每天&nbsp;</td>
+            <%
+                    break;
+                case "2": %>
+            <td>每周&nbsp;</td>
+            <%
+                    break;
+                case "3": %>
+            <td>每月&nbsp;</td>
+            <%
+                    break;
+                case "4": %>
+            <td>每年&nbsp;</td>
+            <%
+                    break;
+                default: %>
+            <td>单次&nbsp;</td>
+                <%
+                            break;
+                    }
+                %></span></td>
         </tr>
         <tr>
             <td>开始时间：</td>

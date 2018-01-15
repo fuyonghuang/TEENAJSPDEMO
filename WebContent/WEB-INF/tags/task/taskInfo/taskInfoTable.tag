@@ -192,6 +192,7 @@
                 case "2": %>
             <td>
                 <a href="/topGover/task/taskInfo/detail/releasedTaskDetails.jsp?txtAction=detail&taskId=<%=record.getString("task_id")%>">详情</a>
+                <a href="/topGover/task/taskInfo/editTaskFrom.jsp?txtAction=detail&taskId=<%=record.getString("task_id")%>">详情</a>
                 &nbsp;
             </td>
             <%

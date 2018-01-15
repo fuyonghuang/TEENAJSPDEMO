@@ -19,8 +19,8 @@
 </head>
 <body>
 
-<form action="">
-    <input type="hidden" name="subTaskListStr">
+<form action="/topGover/task/taskInfo/taskInfoSave.jsp?txtAction=saveMulitTask" method="post">
+
     任务名称: <input type="text" name="taskName"><br>
     开始时间: <input type="date" name="startDate">
     <input type="time" name="startTime"> ~ 截至时间: <input type="date" name="endDate">
@@ -36,6 +36,9 @@
         <option value="3">每月</option>
         <option value="4">每年</option>
     </select>
+
+    <textarea name="subTaskListStr" id="subTaskListStr"></textarea>
+
     <h3>选择子任务</h3>
     <button type="button" onclick="subTaskTableSelect()">选择子任务</button>
     <div>
@@ -67,6 +70,7 @@
     </div>
     <button type="submit">提交</button>
     <button type="button">取消</button>
+
 </form>
 </body>
 <script>
@@ -89,11 +93,14 @@
           var checkedNode = e.getCheckedNode();
           var tableData = JSON.parse(e.getTableDataJson()).data;
           console.log(tableData[0].TASK_ID);
+          debugger
           for (var j = 0; j < tableData.length; j++) {
             for (var i = 0; i < checkedNode.length; i++) {
-              if (tableData[j].TASK_ID == checkedNode[i].value) {
-                subTaskList.push(tableData[j]);
-                console.table(subTaskList)
+              if (checkedNode[i].checked) {
+                if (tableData[j].TASK_ID == checkedNode[i].value) {
+                  subTaskList.push(tableData[j]);
+                  console.table(subTaskList)
+                }
               }
 
             }
@@ -111,9 +118,14 @@
   function createSubTaskList() {
     $("#subTaskList").append("");
     var html = ""
+    var json = "";
     for (var i = 0; i < subTaskList.length; i++) {
       var status;
       var handleType;
+      json += subTaskList[i].TASK_ID;
+      if (i != subTaskList.length) {
+        json += ",";
+      }
       switch (subTaskList[i].INFO_STATUS) {
         case "0":
           status = '待审核'
@@ -170,10 +182,9 @@
           + '</td></tr>';
 
     }
-
+    debugger
+    document.getElementById("subTaskListStr").value = json;
     $("#subTaskList").append(html);
-
-    document.getElementsByName("subTaskListStr").value= JSON.stringify(subTaskList);
 
   }
 

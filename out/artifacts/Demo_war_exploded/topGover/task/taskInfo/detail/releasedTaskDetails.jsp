@@ -1,13 +1,8 @@
-<%--
-  Created by IntelliJ IDEA.
-  Date: 2018/1/4
-  Time: 17:46
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page language="java" pageEncoding="UTF-8" %>
 <%@ include file="/import.jsp" %>
 <%@ include file="/topGover/task/po/taskInfoVariable.jsp" %>
 <%@ include file="/configQueryPage.jsp" %>
+<%@ include file="/topGover/task/sqlConstant/taskObjectInfoSql.jsp" %>
 <%
     Record record = new Record();
     Record taskObjectInfoRecord = new Record();
@@ -26,7 +21,7 @@
         record.next();
         vPara = new Vector();
         //获取（检查单位）task_object_info列表。
-        querySqlStr = "SELECT t.* FROM T_TASK_OBJECT_INFO t where  t.task_id = ? ";
+        querySqlStr = QUERY_TASKOBJECTINFO + " and t.task_id = ? ";
         vPara.add(taskId);
         taskObjectInfoRecord = sqlManager.getRecords(querySqlStr, vPara, pageQuery);
         request.getSession().setAttribute("expExcel_sql", querySqlStr);
@@ -36,11 +31,8 @@
 <html>
 <head>
     <title>已发布</title>
-    <%-- <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>--%>
-    <script src="https://unpkg.com/sweetalert2@7.3.2/dist/sweetalert2.all.js"></script>
-
-    <!-- Include a polyfill for ES6 Promises (optional) for IE11, UC Browser and Android browser support -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/page.css">
+    <script src="/js/common.js"></script>
 </head>
 <body>
 <!-- 任务统计信息 --开始---->
@@ -136,11 +128,38 @@
                 <td><%=taskObjectInfoRecord.getString("total_check_num")%>&nbsp;</td>
                 <td><%=taskObjectInfoRecord.getString("danger_num")%>&nbsp;</td>
                 <td><%=taskObjectInfoRecord.getString("handle_time")%>&nbsp;</td>
-                <td><%=taskObjectInfoRecord.getString("status")%>&nbsp;</td>
+                <%
+                    switch (taskObjectInfoRecord.getString("status")) {
+                        case "0": %>
+                <td>待审核&nbsp;</td>
+                <%
+                        break;
+                    case "1": %>
+                <td>通过审核&nbsp;</td>
+                <%
+                        break;
+                    case "2": %>
+                <td>审核拒绝&nbsp;</td>
+                <%
+                        break;
+                    case "3": %>
+                <td>已发布&nbsp;</td>
+                <%
+                        break;
+                    case "4": %>
+                <td>已完成&nbsp;</td>
+                <%
+                        break;
+                    default: %>
+                <td>待审核&nbsp;</td>
+                <%
+                            break;
+                    }
+                %>
                 <td><%=taskObjectInfoRecord.getString("confirm_user_name")%>&nbsp;</td>
                 <td><%=taskObjectInfoRecord.getString("confirm_time")%>&nbsp;</td>
                 <td>
-                    <a href="userInfo.jsp?txtAction=update&userId=<%=taskObjectInfoRecord.getString("task_objct_id")%>">详情</a>
+                    <a href="taskDetail.jsp?txtAction=update&userId=<%=taskObjectInfoRecord.getString("task_objct_id")%>">详情</a>
                     <a href="#" onclick="overseeing()">督办</a>
                 </td>
             </tr>
