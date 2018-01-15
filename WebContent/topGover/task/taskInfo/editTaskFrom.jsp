@@ -18,6 +18,7 @@
         vPara = new Vector();
         //获取（检查单位）task_object_info列表。
         taskFormRecord = CommonDaoAction.getInfoByKeyValue("t_task_form", "task_id", taskId);
+
         vPara.add(taskId);
         request.getSession().setAttribute("expExcel_sql", querySqlStr);
         request.getSession().setAttribute("expExcel_para", vPara);
@@ -30,9 +31,6 @@
     <title>任务编辑</title>
     <script src="/js/jquery-2.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/artDialog/7.0.0/dialog-plus.js"></script>
-    <%--    <script src="https://cdnjs.cloudflare.com/ajax/libs/artDialog/7.0.0/dialog.js"></script>--%>
-    <%-- <script src="https://unpkg.com/sweetalert2@7.3.2/dist/sweetalert2.all.js"></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>--%>
     <link rel="stylesheet" href="/css/zTreeStyle/zTreeStyle.css" type="text/css">
     <script type="text/javascript" src="/js/ztree/jquery.ztree.core.js"></script>
 </head>
@@ -102,8 +100,10 @@
     </div>
     <br>
     工作日限制：
-    <input type="radio" name="onlyWorkDay" value="0"> 否
-    <input type="radio" name="onlyWorkDay" value="1"> 是
+    <input type="radio" name="onlyWorkDay" value="0"
+           <%if(record.getString("only_work_day").equals("0")){%>checked<%} %>> 否
+    <input type="radio" name="onlyWorkDay" value="1"
+           <%if(record.getString("only_work_day").equals("1")){%>checked<%} %>> 是
     <br>
     工作日历：<input type="date" name="notHandleDay" value="<%=record.getString("not_handle_day")%>">
     <br/>
@@ -118,9 +118,15 @@
     <select name="taskCategory"
             onchange="checkTaskCategory(this.options[this.options.selectedIndex].value)"
             id="taskCategory">
-        <option value="0">自检</option>
-        <option value="1">抽查</option>
-        <option value="2">以上两者</option>
+        <option value="0"
+                <%if(record.getString("task_category").equals("0")){%>selected="selected"<%} %>>自检
+        </option>
+        <option value="1"
+                <%if(record.getString("task_category").equals("1")){%>selected="selected"<%} %>>抽查
+        </option>
+        <option value="2"
+                <%if(record.getString("task_category").equals("2")){%>selected="selected"<%} %>>以上两者
+        </option>
     </select><br/>
     <div style="display: none" id="execCompanyDiv">
         执行单位：<zt:mytreeselect id="checkCompanCode" name="checkCompanCode"
@@ -135,12 +141,24 @@
 
     单位类型：
     <select name="objectCompanyType">
-        <option value="0">大学</option>
-        <option value="1">大专</option>
-        <option value="2">高中</option>
-        <option value="3">初中</option>
-        <option value="4">小学</option>
-        <option value="5">幼儿园</option>
+        <option value="0"
+                <%if(record.getString("object_company").equals("0")){%>selected="selected"<%} %>>大学
+        </option>
+        <option value="1"
+                <%if(record.getString("object_company").equals("1")){%>selected="selected"<%} %>>大专
+        </option>
+        <option value="2"
+                <%if(record.getString("object_company").equals("2")){%>selected="selected"<%} %>> 高中
+        </option>
+        <option value="3"
+                <%if(record.getString("object_company").equals("3")){%>selected="selected"<%} %>>初中
+        </option>
+        <option value="4"
+                <%if(record.getString("object_company").equals("4")){%>selected="selected"<%} %>>小学
+        </option>
+        <option value="5"
+                <%if(record.getString("object_company").equals("5")){%>selected="selected"<%} %>>幼儿园
+        </option>
     </select>
 
     <br/>
@@ -230,7 +248,6 @@
     }
     $(".tabel").append('<div><table>' + html + '</table></div>')
   }
-
 
 </script>
 

@@ -56,7 +56,21 @@
     <button type="button" onclick="alertFromPage()" name="selectFrom">选择表单</button>
     <input type="hidden" name="formIds" id="formIds">
     <div id="formTable">
-        <div class="tabel"></div>
+        <table class="">
+            <tr class="queryTableResultTitleStyle">
+                <td width="10%"><span id="task_name">表单名称</span>
+                </td>
+                <td width="10%"><span
+                        id="company_name">表单类型</span>
+                </td>
+                <td width="10%"><span id="start_date">所属单位</span>
+                </td>
+                <td width="10%"><span id="end_date">操作</span></td>
+            </tr>
+            <tbody id="selectFormList">
+
+            </tbody>
+        </table>
     </div>
     <br/>
     任务检查方式：
@@ -137,6 +151,8 @@
     document.getElementById("applyDiv").style.display = "none";
   }
 
+  var selectFormList = new Array();
+
   function alertFromPage() {
     top.dialog({
       title: "选择用户",
@@ -147,24 +163,55 @@
         id: 'ok',
         value: '选择',
         callback: function () {
+          var e = top.$("div[role=dialog]").find("iframe")[0].contentWindow;
+          var checkedNode = e.getCheckedNode();
+          var tableData = JSON.parse(e.getTableDataJson()).data;
           debugger
-          createFormTabel(sessionStorage.getItem("formIds"))
+          for (var j = 0; j < tableData.length; j++) {
+            for (var i = 0; i < checkedNode.length; i++) {
+              if (checkedNode[i].checked) {
+                if (tableData[j].FORM_ID == checkedNode[i].value) {
+                  selectFormList.push(tableData[j]);
+                }
+              }
+            }
+          }
+          createFormTabel();
         }
       }]
     }).show();
   }
 
   //创建显示选择的表单表格。
-  function createFormTabel(v) {
-    var parse = JSON.parse(v);
-    var formDate = parse.formDate;
-    var html = "";
+  function createFormTabel() {
 
-    for (var i = 0; i < formDate.length; i++) {
-      debugger
-      html += '<tr><td>' + formDate[i] + '</td></tr>'
+    $("#selectFormList").append("");
+    var html = ""
+    var json = "";
+    var formType = "";
+
+    for (var i = 0; i < selectFormList.length; i++) {
+      switch (selectFormList[i].FORM_TYPE) {
+        case "0":
+          formType = '选项表单'
+          break;
+        case "1":
+          formType = '模板文件表单'
+          break;
+        case "2":
+          formType = '其它填报表单'
+          break;
+        default :
+          formType = '选项表单'
+          break;
+      }
+      html += '<tr><td>' + selectFormList[i].FORM_NAME + '</td>' +
+          '<td>' + formType + '</td>' +
+          '<td>' + selectFormList[i].COMPANY_NAME + '</td>' +
+          '<td><a href="#">预览</a></td></tr>';
     }
-    $(".tabel").append('<div><table>' + html + '</table></div>')
+
+    $("#selectFormList").append(html);
   }
 
 

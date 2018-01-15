@@ -114,6 +114,8 @@
     //选择的表单id
     String formIds = request.getParameter("formIds") == null ? ""
             : request.getParameter("formIds");
+    String userIdStr =
+            request.getParameter("userIdStr") == null ? "" : request.getParameter("userIdStr");
     String action =
             request.getParameter("txtAction") == null ? "query" : request.getParameter("txtAction");
 %>

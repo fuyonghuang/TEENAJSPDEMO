@@ -37,7 +37,7 @@
 %>
 <html>
 <head>
-    <title>已发布</title>
+    <title>多任务详情</title>
     <%-- <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>--%>
     <script src="https://unpkg.com/sweetalert2@7.3.2/dist/sweetalert2.all.js"></script>
 

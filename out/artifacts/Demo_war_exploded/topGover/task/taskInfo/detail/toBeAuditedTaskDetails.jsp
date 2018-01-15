@@ -37,7 +37,7 @@
 %>
 <html>
 <head>
-    <title>待审核</title>
+    <title>待审核详情</title>
     <link rel="stylesheet" type="text/css" href="/css/page.css">
     <script src="/js/common.js"></script>
 </head>

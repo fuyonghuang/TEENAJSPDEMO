@@ -50,6 +50,8 @@
         record = sqlManager.getRecords(strSql, vPara, pageQuery);
 // 	        request.getSession().setAttribute("expExcel_sql",strSql);
 // 	        request.getSession().setAttribute("expExcel_para",vPara);
+        out.println("<span id='formTableData' style='display:none'>" + record.toJsonString()
+                + "</span>");
     }
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -129,7 +131,7 @@
                 while (record.next()) {
             %>
             <tr>
-                <td><input type="checkbox" name="formIds" onclick="onSelect(this)"
+                <td><input type="checkbox" name="formIds"
                            value="<%=record.getString("FORM_ID")%>">
                 </td>
                 <td><%=record.getString("COMPANY_NAME")%>
@@ -155,6 +157,7 @@
             </tr>
             <%}%>
         </table>
+        <span name="formTableData" style="display: none"></span>
     </div>
     <!--  分页显示-->
     <table class="queryTableStyle" style="width:100%">
@@ -181,6 +184,15 @@
     var jsonObject = new Object();
     jsonObject.formDate = list;
     sessionStorage.setItem("formIds", JSON.stringify(jsonObject));
+  }
+
+  function getCheckedNode() {
+
+    return document.getElementsByName("formIds");
+  }
+
+  function getTableDataJson() {
+    return document.getElementById("formTableData").innerText;
   }
 
   $(function () {

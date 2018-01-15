@@ -29,7 +29,6 @@
 
         }
 
-        formIdStr = "1,2,3,4,5";
         String[] formArry = formIdStr.split(",");
         //插入task_info
 
@@ -113,8 +112,7 @@
 
         }
 
-        String userStr = "1,2,3,4,5,6,7,8,9";
-        String[] userArry = userStr.split(",");
+        String[] userArry = userIdStr.split(",");
         // 根据选择任务接收对象插入至task_object_info中
         for (String user : userArry
                 ) {
@@ -168,64 +166,9 @@
                         + "\");window.history.back(); </script>");
                 return;
             }
-
-            for (SCompanyInfo Office : offices
-                    ) {
-
-                Record formInfoRecord = CommonDaoAction
-                        .getInfoByKeyValue("s_form_info", "form_id", formId);
-                String formName = formInfoRecord.getString("form_name");
-                String tableName = formInfoRecord.getString("table_name");
-                String tableId = formInfoRecord.getString("table_id");
-                String checkBelongCompanyCode = formInfoRecord.getString("company_name");
-                String checkResultId = CommonUtil.getUUid();
-                HashMap<String, String> checkInfoMap = warpCheckInfoMap(taskId, taskFrom, userInfo,
-                        Office.getCompanyCode(), Office.getCompanyName(), checkCompanyCode,
-                        checkCompanyName, formId, formName, tableName, tableId,
-                        checkBelongCompanyCode, checkResultId);
-                try {
-                    CommonDaoAction.insertInfo("t_check_info", checkInfoMap);
-                } catch (Exception e) {
-                    out.println("<script>alert(\"保存出错,错误代码:" + e.getMessage()
-                            + "\");window.history.back(); </script>");
-                    return;
-                }
-
-                //获取检查内容
-                Record checkContentRecord = CommonDaoAction
-                        .getInfoByKeyValue("s_check_content", "form_id", formId);
-                //生成检查结果明细表数据
-                while (checkContentRecord.next()) {
-                    String itemId = checkContentRecord.getString("item_id");
-                    String itemTitle = checkContentRecord.getString("item_title");
-                    String itemNo = checkContentRecord.getString("item_no");
-                    String typeName1 = checkContentRecord.getString("type_name1");
-                    String typeName2 = checkContentRecord.getString("type_name2");
-                    String typeName3 = checkContentRecord.getString("type_name3");
-                    String contentTitle = checkContentRecord.getString("content_title");
-                    String answerResult = checkContentRecord.getString("answer_result");
-                    String itemContent = checkContentRecord.getString("item_content");
-                    HashMap<String, String> checkResultMap = warpCheckResultMap(taskId,
-                            Office.getCompanyCode(), Office.getCompanyName(), checkCompanyCode,
-                            checkCompanyName, createTime,
-                            createUser, formId, formName, tableName, tableId, checkResultId, itemId,
-                            itemTitle, itemNo,
-                            typeName1, typeName2, typeName3, contentTitle, answerResult,
-                            itemContent);
-
-                    try {
-                        CommonDaoAction.insertInfo("t_check_result", checkResultMap);
-                    } catch (Exception e) {
-                        out.println("<script>alert(\"保存出错,错误代码:" + e.getMessage()
-                                + "\");window.history.back(); </script>");
-                        return;
-                    }
-
-
-                }
-            }
         }
-        response.sendRedirect("/topGover/task/taskInfo/taskInfoList.jsp?txtAction=query");
+        response.sendRedirect(request.getContextPath()
+                + "/topGover/task/taskInfo/taskInfoList.jsp?txtAction=query");
     } else if ("update".equals(action)) {
         //更新数据
         HashMap<String, String> hKeyValue = new HashMap<String, String>();
@@ -234,10 +177,11 @@
         hKeyValue.put("userTel",
                 request.getParameter("userTel") == null ? "" : request.getParameter("userTel"));
         try {
-            CommonDaoAction.updateInfoByKeyValue("userInfo", "userId", "", hKeyValue);
+            CommonDaoAction.updateInfoByKeyValue("t_task_info", "task_id", "", hKeyValue);
             //增加日志，注释，没表
-            //CommonDaoAction.insertLog("userInfo","修改用户信息",hKeyValue.toString()+userId,"update",userInfo.getString("userName"));
-            response.sendRedirect("userInfoQuery.jsp?txtAction=query&saveQuery=1");
+
+            response.sendRedirect(request.getContextPath()
+                    + "/topGover/task/taskInfo/taskInfoList.jsp?txtAction=query");
         } catch (Exception e) {
             out.println("<script>alert(\"保存出错,错误代码:" + e.getMessage()
                     + "\");window.history.back(); </script>");
@@ -247,21 +191,31 @@
     } else if ("delete".equals(action)) {
         //删除数据
         try {
-            CommonDaoAction.deleteInfoByKeyValue("userInfo", "userId", "");
-            response.sendRedirect("userInfoQuery.jsp?txtAction=query&saveQuery=1");
+            CommonDaoAction.deleteInfoByKeyValue("t_task_info", "task_id", taskId);
+            response.sendRedirect(request.getContextPath()
+                    + "/topGover/task/taskInfo/taskInfoList.jsp?txtAction=query");
         } catch (Exception e) {
             out.println("<script>alert(\"保存出错,错误代码:" + e.getMessage()
                     + "\");window.history.back(); </script>");
             return;
         }
     } else if ("audit".equals(action)) {
-        procFlowInfo = "{\"123\",\"1234\"}";
+
+        JSONObject flowInfo = new JSONObject();
+        flowInfo.put("check_person", userInfo.getUserName());
+        flowInfo.put("check_desc", checkDesc);
+        flowInfo.put("check_time", checkTime);
+        flowInfo.put("check_status", infoStatus);
+
+        procFlowInfo = flowInfo.toString();
         //更新数据
         HashMap<String, String> hKeyValue = new HashMap<String, String>();
         hKeyValue.put("check_desc", checkDesc);
         hKeyValue.put("check_time", checkTime);
         hKeyValue.put("info_status", infoStatus);
         hKeyValue.put("proc_flow_info", procFlowInfo);
+        hKeyValue.put("CHECK_PERSON", userInfo.getUserName());
+
         try {
             CommonDaoAction.updateInfoByKeyValue("t_task_info", "task_id", taskId, hKeyValue);
             //增加日志，注释，没表
@@ -298,7 +252,8 @@
                     CommonDaoAction
                             .updateInfoByKeyValue("t_task_info", "task_id", subTaskid, hKeyValue);
                     //增加日志，注释，没表
-                    response.sendRedirect("mulitTaskInfoList.jsp?txtAction=query");
+                    response.sendRedirect(
+                            request.getContextPath() + "/mulitTaskInfoList.jsp?txtAction=query");
                 } catch (Exception e) {
                     out.println("<script>alert(\"保存出错,错误代码:" + e.getMessage()
                             + "\");window.history.back(); </script>");

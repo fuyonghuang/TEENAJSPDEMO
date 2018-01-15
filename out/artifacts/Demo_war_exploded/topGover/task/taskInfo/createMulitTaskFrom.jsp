@@ -11,9 +11,6 @@
     <title>多任务创建</title>
     <script src="/js/jquery-2.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/artDialog/7.0.0/dialog-plus.js"></script>
-    <%--    <script src="https://cdnjs.cloudflare.com/ajax/libs/artDialog/7.0.0/dialog.js"></script>--%>
-    <%-- <script src="https://unpkg.com/sweetalert2@7.3.2/dist/sweetalert2.all.js"></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>--%>
     <link rel="stylesheet" href="/css/zTreeStyle/zTreeStyle.css" type="text/css">
     <script type="text/javascript" src="/js/ztree/jquery.ztree.core.js"></script>
 </head>

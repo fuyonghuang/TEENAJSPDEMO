@@ -36,24 +36,19 @@
 %>
 <html>
 <head>
-    <title>已发布</title>
-    <%-- <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>--%>
-    <script src="https://unpkg.com/sweetalert2@7.3.2/dist/sweetalert2.all.js"></script>
-
-    <!-- Include a polyfill for ES6 Promises (optional) for IE11, UC Browser and Android browser support -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+    <title>已发布详情</title>
+    <link rel="stylesheet" type="text/css" href="/css/page.css">
+    <script src="/js/common.js"></script>
 </head>
 <body>
 
 
 <div class="tablediv">
     <table class="queryTableStyle">
-
         <tr>
             <td>任务名称：</td>
             <td>
                 <span><%=record.getString("task_name")%></span>
-
             </td>
             <td>下发单位：</td>
             <td>
@@ -79,20 +74,16 @@
     <div class="tablediv">
         <table class="queryTableResultStyle">
             <tr class="queryTableResultTitleStyle">
-
-                <td width="10%">被检查到单位<span id="task_name"></td>
-
-                <td width="10%">开始时间 <span id="start_date"></td>
-                <td width="10%">结束时间 <span id="end_date"></td>
-                <td width="10%"> 检查频率<span id="release_persion"></td>
-                <td width="10%">检查情况 <span id="release_time"></td>
-                <td width="10%">隐患数 <span id="info_handle_type"></td>
-                <td width="5%">最近检查时间 <span
-                        id="check_company_confirm_num"></td>
-                <td width="5%">任务状态 <span
-                        id="check_company_finished_num"></td>
-                <td width="5%">认领人 <span id="danger_num1"></td>
-                <td width="5%">认领时间 <span id="danger_num2"></td>
+                <td width="10%"><span id="task_name">被检查到单位</span></td>
+                <td width="10%"><span id="start_date">开始时间</span></td>
+                <td width="10%"><span id="end_date">结束时间</span></td>
+                <td width="10%"><span id="release_persion">检查频率</span></td>
+                <td width="10%"><span id="release_time">检查情况</span></td>
+                <td width="10%"><span id="info_handle_type">隐患数</span></td>
+                <td width="5%"><span id="check_company_confirm_num">最近检查时间 </span></td>
+                <td width="5%"><span id="check_company_finished_num">任务状态 </span></td>
+                <td width="5%"><span id="danger_num1">认领人</span></td>
+                <td width="5%"><span id="danger_num2">认领时间</span></td>
                 <td>操作</td>
             </tr>
             <%

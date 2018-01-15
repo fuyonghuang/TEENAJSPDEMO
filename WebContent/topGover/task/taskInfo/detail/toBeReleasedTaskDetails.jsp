@@ -37,7 +37,8 @@
 <html>
 <head>
     <title>已发布详情</title>
-
+    <link rel="stylesheet" type="text/css" href="/css/page.css">
+    <script src="/js/common.js"></script>
 </head>
 <body>
 
