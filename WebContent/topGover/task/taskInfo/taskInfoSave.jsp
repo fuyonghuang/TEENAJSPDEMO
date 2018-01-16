@@ -12,7 +12,7 @@
         //todo
         //对象分类   0 单位1指定人
         String taskObjctType = "";
-        if ("".equals(apportionUserId)) {
+        if ("".equals(apportionUserIds)) {
             taskObjctType = "0";
         } else {
             taskObjctType = "1";
@@ -97,11 +97,11 @@
                 ) {
             String taskObjectId = CommonUtil.getUUid();
             //组装map  task_Object_info
-            HashMap<String, String> taskObjectMap = wrapTaskObjectMap(taskObjctType, taskId, map,
+            HashMap<String, String> taskObjectMap = wrapTaskObjectMap(taskObjctType, taskId,
                     Office.getCompanyName(),
                     Office.getCompanyCode(), taskObjectId, checkCompanyCode, checkCompanyName,
-                    apportionUserId,
-                    apportionUserName, checkRemark, taskType);
+                    "",
+                    "", checkRemark, taskType);
             try {
                 CommonDaoAction.insertInfo("t_task_object_info", taskObjectMap);
             } catch (Exception e) {
@@ -112,37 +112,22 @@
 
         }
 
-        String[] userArry = userIdStr.split(",");
+        String[] userIdArray = apportionUserIds.split(",");
+        String[] userNameArray = apportionUserNames.split(",");
         // 根据选择任务接收对象插入至task_object_info中
-        for (String user : userArry
+        int i = 0;
+        for (String user : userIdArray
                 ) {
             //插入task_Object_info
-            HashMap<String, String> taskObjectMap = new HashMap();
             String taskObjectId = CommonUtil.getUUid();
-            taskObjectMap.put("task_objct_id", taskObjectId);
-            taskObjectMap.put("task_id", taskId);
-            map.put("company_code", OfficeStr);
-            map.put("company_name", companyName);
-            taskObjectMap.put("check_company_code", checkCompanyCode);
-            taskObjectMap.put("check_company_name", checkCompanyName);
-            taskObjectMap.put("user_id", user);
-            taskObjectMap.put("user_name", user);
-            taskObjectMap.put("task_objct_type", "1");
-            taskObjectMap.put("confirm_time", "");
-            taskObjectMap.put("confirm_user_id", "");
-            taskObjectMap.put("confirm_user_name", "");
-            taskObjectMap.put("task_start_time", "");
-            taskObjectMap.put("task_end_time", "");
-            taskObjectMap.put("handle_time", "");
-            taskObjectMap.put("handle_user_id", "");
-            taskObjectMap.put("handle_user_name", "");
-            taskObjectMap.put("status", "0");
-            taskObjectMap.put("check_remark", checkRemark);
-            taskObjectMap.put("total_check_num", "");
-            taskObjectMap.put("create_time", DateUtils.formatDateToString(new Date()));
-            taskObjectMap.put("create_user", "");
-            taskObjectMap.put("task_type", "");
-
+            taskObjctType = "1";
+            //组装map  task_Object_info
+            HashMap<String, String> taskObjectMap = wrapTaskObjectMap(taskObjctType, taskId,
+                    "office",
+                    "office", taskObjectId, checkCompanyCode, checkCompanyName,
+                    user,
+                    userNameArray[i], checkRemark, taskType);
+            i++;
             try {
                 CommonDaoAction.insertInfo("t_task_object_info", taskObjectMap);
             } catch (Exception e) {
@@ -202,7 +187,7 @@
     } else if ("audit".equals(action)) {
 
         JSONObject flowInfo = new JSONObject();
-        flowInfo.put("check_person", userInfo.getUserName());
+        flowInfo.put("check_person", "123");
         flowInfo.put("check_desc", checkDesc);
         flowInfo.put("check_time", checkTime);
         flowInfo.put("check_status", infoStatus);
@@ -214,7 +199,7 @@
         hKeyValue.put("check_time", checkTime);
         hKeyValue.put("info_status", infoStatus);
         hKeyValue.put("proc_flow_info", procFlowInfo);
-        hKeyValue.put("CHECK_PERSON", userInfo.getUserName());
+        hKeyValue.put("CHECK_PERSON", "1234");
 
         try {
             CommonDaoAction.updateInfoByKeyValue("t_task_info", "task_id", taskId, hKeyValue);
@@ -266,6 +251,8 @@
             return;
         }
         ;
+    } else if (action.equals("updateMulitTask")) {
+
     }
 
 %>
@@ -475,7 +462,7 @@
      * @return
      */
     private HashMap<String, String> wrapTaskObjectMap(String taskObjctType, String taskId,
-            HashMap<String, String> map, String companyName, String companyCode,
+            String companyName, String companyCode,
             String taskObjectId,
             String checkCompanyCode, String checkCompanyName, String apportionUserId,
             String apportionUserName, String checkRemark, String taskType) {
@@ -485,7 +472,7 @@
         taskObjectMap.put("company_code", companyCode);
         taskObjectMap.put("company_name", companyName);
         taskObjectMap.put("check_company_code", checkCompanyCode);
-        taskObjectMap.put("check_company_name", checkCompanyName);
+        taskObjectMap.put("checzk_company_name", checkCompanyName);
         taskObjectMap.put("user_id", apportionUserId);
         taskObjectMap.put("user_name", apportionUserName);
         taskObjectMap.put("task_objct_type", taskObjctType);

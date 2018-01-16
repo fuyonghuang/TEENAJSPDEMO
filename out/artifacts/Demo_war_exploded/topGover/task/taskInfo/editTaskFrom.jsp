@@ -91,7 +91,7 @@
     <input type="radio" value="1" name="isApply" id="isTrue" onclick="showApplyDiv()"> 是
     <br>
     <div id="applyDiv" style="display: none">
-        审核人：<select id="applyPerson">
+        审核人：<select id="checkPerson">
         <option value="张三">张三</option>
         <option value="李四">李四</option>
         <option value="王五">王五</option>

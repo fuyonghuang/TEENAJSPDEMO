@@ -106,11 +106,11 @@
     String isApply =
             request.getParameter("isApply") == null ? "0" : request.getParameter("isApply");
     //指定人
-    String apportionUserId = request.getParameter("apportionUserId") == null ? ""
-            : request.getParameter("apportionUserId");
+    String apportionUserIds = request.getParameter("apportionUserIds") == null ? ""
+            : request.getParameter("apportionUserIds");
     //指定人name
-    String apportionUserName = request.getParameter("apportionUserName") == null ? ""
-            : request.getParameter("apportionUserName");
+    String apportionUserNames = request.getParameter("apportionUserNames") == null ? ""
+            : request.getParameter("apportionUserNames");
     //选择的表单id
     String formIds = request.getParameter("formIds") == null ? ""
             : request.getParameter("formIds");

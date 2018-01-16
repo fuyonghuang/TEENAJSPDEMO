@@ -93,7 +93,9 @@
             %>
 
             <tr>
-                <td><%=taskObjectInfoRecord.getString("company_name")%>&nbsp;</td>
+                <td><%=taskObjectInfoRecord.getString("company_name") == null ? taskObjectInfoRecord
+                        .getString("user_id") : taskObjectInfoRecord.getString("company_name")%>&nbsp;
+                </td>
                 <td><%=record.getString("start_date")%>&nbsp;</td>
                 <td><%=record.getString("end_date")%>&nbsp;</td>
                 <%

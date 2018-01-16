@@ -1,35 +1,92 @@
 <%@ page language="java" pageEncoding="UTF-8" %>
 <%@ include file="/import.jsp" %>
 <%@ taglib prefix="zt" tagdir="/WEB-INF/tags" %>
+
+
+<%@ include file="/topGover/task/sqlConstant/taskInfoSql.jsp" %>
+<%@ taglib prefix="zt" tagdir="/WEB-INF/tags" %>
+
+<%
+
+    String taskId = request.getParameter("taskId") == null ? "" : request.getParameter("taskId");
+    String action = request.getParameter("textAction") == null ? "query"
+            : request.getParameter("textAction");
+    Record record = new Record();
+    Record taskFormRecord = new Record();
+    SqlManager sqlManager = new SqlManager();
+    Vector vPara = new Vector();
+    String querySqlStr = "";
+
+    if (action.equals("edit")) {
+        //获取task_info详情
+        record = CommonDaoAction.getInfoByKeyValue("t_task_info", "task_id", taskId);
+        record.next();
+        vPara = new Vector();
+        //获取（检查单位）task_object_info列表。
+        taskFormRecord = CommonDaoAction.getInfoByKeyValue("t_task_form", "task_id", taskId);
+        vPara.add(taskId);
+
+        request.getSession().setAttribute("expExcel_sql", querySqlStr);
+        request.getSession().setAttribute("expExcel_para", vPara);
+    }
+%>
 <html>
 <head>
     <title>Title</title>
     <script src="/js/jquery-2.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/artDialog/7.0.0/dialog-plus.js"></script>
-    <%--    <script src="https://cdnjs.cloudflare.com/ajax/libs/artDialog/7.0.0/dialog.js"></script>--%>
-    <%-- <script src="https://unpkg.com/sweetalert2@7.3.2/dist/sweetalert2.all.js"></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>--%>
     <link rel="stylesheet" href="/css/zTreeStyle/zTreeStyle.css" type="text/css">
     <script type="text/javascript" src="/js/ztree/jquery.ztree.core.js"></script>
 </head>
 <body>
 
 <form action="/topGover/task/taskInfo/taskInfoSave.jsp?txtAction=save" method="post">
-
-    任务名称: <input type="text" name="taskName"><br>
-    开始时间: <input type="date" name="startDate">
-    <input type="time" name="startTime"> ~ 截至时间: <input type="date" name="endDate">
-    <input type="time" name="endTime"><br>
-    <input type="text" name="taskType">
+    <input type="hidden" value="<%=record.getString("task_id")%>" id="taskId" name="taskId">
+    任务名称: <input type="text" name="taskName" value="<%=record.getString("task_name")%>"><br>
+    开始时间:
+    <input type="date" name="startDate" value="<%=record.getString("start_date")%>">
+    <input type="time" name="startTime" value="<%=record.getString("start_time")%>"> ~
+    截至时间: <input type="date" name="endDate" value="<%=record.getString("end_date")%>">
+    <input type="time" name="endTime" value="<%=record.getString("end_time")%>"><br>
+    任务类型：
+    <select name="taskType">
+        <option value="0">每日自检</option>
+        <option value="1">日常安检</option>
+    </select>
     <br/>
 
     处理方式：
     <select name="infoHandleType">
-        <option value="0">单次</option>
-        <option value="1">每日</option>
-        <option value="2">每周</option>
-        <option value="3">每月</option>
-        <option value="4">每年</option>
+        <option value="0"
+                <%if(record.getString("info_handle_type").equals("0")){%>selected="selected"<%
+            }
+
+        %>>单次
+        </option>
+        <option value="1"
+                <%if(record.getString("info_handle_type").equals("1")){%>selected="selected"<%
+            }
+
+        %>>每日
+        </option>
+        <option value="2"
+                <%if(record.getString("info_handle_type").equals("2")){%>selected="selected"<%
+            }
+
+        %>>每周
+        </option>
+        <option value="3"
+                <%if(record.getString("info_handle_type").equals("3")){%>selected="selected"<%
+            }
+
+        %>>每月
+        </option>
+        <option value="4"
+                <%if(record.getString("info_handle_type").equals("4")){%>selected="selected"<%
+            }
+
+        %>>每年
+        </option>
     </select>
     <br>
     是否审核：
@@ -47,10 +104,12 @@
     </div>
     <br>
     工作日限制：
-    <input type="radio" name="onlyWorkDay" value="0"> 否
-    <input type="radio" name="onlyWorkDay" value="1"> 是
+    <input type="radio" name="onlyWorkDay" value="0"
+           <%if(record.getString("only_work_day").equals("0")){%>checked<%} %>> 否
+    <input type="radio" name="onlyWorkDay" value="1"
+           <%if(record.getString("only_work_day").equals("1")){%>checked<%} %>> 是
     <br>
-    工作日历：<input type="date" name="notHandleDay">
+    工作日历：<input type="date" name="notHandleDay" value="<%=record.getString("not_handle_day")%>">
     <br/>
     表单选择：
     <button type="button" onclick="alertFromPage()" name="selectFrom">选择表单</button>
@@ -93,12 +152,24 @@
 
     单位类型：
     <select name="objectCompanyType">
-        <option value="0">大学</option>
-        <option value="1">大专</option>
-        <option value="2">高中</option>
-        <option value="3">初中</option>
-        <option value="4">小学</option>
-        <option value="5">幼儿园</option>
+        <option value="0"
+                <%if(record.getString("object_company").equals("0")){%>selected="selected"<%} %>>大学
+        </option>
+        <option value="1"
+                <%if(record.getString("object_company").equals("1")){%>selected="selected"<%} %>>大专
+        </option>
+        <option value="2"
+                <%if(record.getString("object_company").equals("2")){%>selected="selected"<%} %>> 高中
+        </option>
+        <option value="3"
+                <%if(record.getString("object_company").equals("3")){%>selected="selected"<%} %>>初中
+        </option>
+        <option value="4"
+                <%if(record.getString("object_company").equals("4")){%>selected="selected"<%} %>>小学
+        </option>
+        <option value="5"
+                <%if(record.getString("object_company").equals("5")){%>selected="selected"<%} %>>幼儿园
+        </option>
     </select>
 
     <br/>
@@ -123,8 +194,8 @@
                            url="/topGover/office/office.json"></zt:mytreeselect><br/>
 
 
-    指定人： <zt:mytreeselect id="apportionUserId" name="apportionUserId" value=""
-                          labelName="apportionUserName" labelValue=""
+    指定人： <zt:mytreeselect id="apportionUserIds" name="apportionUserIds" value=""
+                          labelName="apportionUserNames" labelValue=""
                           title="指定人选择" checked="true"
                           url="/topGover/user/userInfo.json"></zt:mytreeselect><br/>
 
@@ -152,6 +223,9 @@
   }
 
   var selectFormList = new Array();
+  if (<%=taskFormRecord.toJsonString()!=null%>) {
+    selectFormList = JSON.parse(<%=taskFormRecord.toJsonString()%>).date;
+  }
 
   function alertFromPage() {
     top.dialog({
@@ -187,10 +261,14 @@
 
     $("#selectFormList").append("");
     var html = ""
-    var json = "";
+    var formJson = "";
     var formType = "";
 
     for (var i = 0; i < selectFormList.length; i++) {
+      formJson += selectFormList[i].TASK_ID;
+      if (i < selectFormList.length - 1) {
+        formJson += ",";
+      }
       switch (selectFormList[i].FORM_TYPE) {
         case "0":
           formType = '选项表单'
@@ -211,6 +289,7 @@
           '<td><a href="#">预览</a></td></tr>';
     }
 
+    document.getElementById("formIds").value = formJson;
     $("#selectFormList").append(html);
   }
 
